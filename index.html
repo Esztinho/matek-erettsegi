@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matek Érettségi Túlélőcsomag</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Matek Érettségi Túlélőcsomag 🎓</h1>
+            <p>A 10 leggyakoribb témakör középszintű érettségihez (2026)</p>
+        </header>
+
+        <main>
+            <nav class="sidebar">
+                <h3>Témakörök</h3>
+                <ul>
+                    <li><a href="#topic-1">1. Halmazok</a></li>
+                    <li><a href="#topic-2">2. Gráfok</a></li>
+                    <li><a href="#topic-3">3. Sorozatok</a></li>
+                    <li><a href="#topic-4">4. Valószínűségszámítás</a></li>
+                    <li><a href="#topic-5">5. Statisztika</a></li>
+                    <li><a href="#topic-6">6. Koord. geo</a></li>
+                    <li><a href="#topic-7">7. Függvények</a></li>
+                    <li><a href="#topic-8">8. Síkgeometria</a></li>
+                    <li><a href="#topic-9">9. Térgeometria</a></li>
+                    <li><a href="#topic-10">10. Hatványozás</a></li>
+                    <li><a href="#gyakorlo-feladatok">+1 Gyakorló feladatok</a></li>
+                </ul>
+            </nav>
+
+
+            <section id="topic-1" class="topic-card">
+                <h2>1. Halmazelmélet és alapvető logika</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>Képzeld el a halmazokat úgy, mint dobozokat, amikbe különböző dolgokat pakolunk. A halmazelmélet
+                    arról szól, hogyan tudjuk ezeket a dobozokat összehasonlítani: mi van mindkettőben, mi van csak az
+                    egyikben. Kiválóan alkalmas adatok rendszerezésére.</p>
+
+                <h3>A kulcsfontosságú képletek és szabályok</h3>
+                <ul>
+                    <li><strong>A &cup; B (Unió / Egyesítés):</strong> Mindenki, aki benne van az A-ban VAGY a B-ben
+                        (vagy mindkettőben).</li>
+                    <li><strong>A &cap; B (Metszet):</strong> Csak azok, akik MINDKÉT halmazban benne vannak.</li>
+                    <li><strong>A \ B (Különbség):</strong> Akik benne vannak az A-ban, KIVÉVE azokat, akik a B-ben is.
+                    </li>
+                </ul>
+
+                <h3>Típusfeladat és lépésenkénti megoldás</h3>
+                <p><em>Feladat:</em> Egy osztályban 30 diák van. Ebből 22-en szeretik a matekot, 17-en a fizikát.
+                    Mindenki szereti legalább az egyiket. Hányan szeretik mindkettőt?</p>
+                <ol>
+                    <li><strong>Rajzolj:</strong> Két egymást metsző kört (Venn-diagram).</li>
+                    <li><strong>A "túlcsordulás" trükkje:</strong> 22 + 17 = 39. De csak 30 diákunk van!</li>
+                    <li><strong>Számolj:</strong> 39 - 30 = 9. Ez a 9 ember a "többlet", ők szeretik mindkettőt.</li>
+                    <li><strong>Töltsd ki a diagramot:</strong> Írd a metszetbe a 9-et. "Csak matek": 22 - 9 = 13. "Csak
+                        fizika": 17 - 9 = 8.</li>
+                </ol>
+
+                <div class="tips">
+                    <strong>💡 Vizsgatipp:</strong> Szöveges feladatnál mindig a középső résszel (metszettel) kezdd a
+                    kitöltést! Ha fogalmad sincs a megoldásról, csak rajzolj fel két egymást metsző kört és írj bele
+                    logikus számokat – már kaphatsz rá részpontot!
+                </div>
+            </section>
+
+            <section id="topic-2" class="topic-card">
+                <h2>2. Gráfelmélet</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>A gráf nem más, mint pöttyök (csúcsok) és azokat összekötő vonalak (élek) rajza. Az érettségin az I.
+                    részben szokott szerepelni egy rövid rajzolós feladatként.</p>
+
+                <h3>A kulcsfontosságú képletek és szabályok</h3>
+                <ul>
+                    <li><strong>Fokszám:</strong> Azt mutatja meg, hogy egy adott pöttyből (csúcsból) hány vonal (él)
+                        indul ki.</li>
+                    <li><strong>A "Kézfogás-lemma":</strong> A gráfban a fokszámok összege mindig <strong>páros
+                            szám</strong>.</li>
+                </ul>
+
+                <h3>Típusfeladat és lépésenkénti megoldás</h3>
+                <p><em>Feladat:</em> Rajzoljon egy olyan ötpontú gráfot, amelyben a pontok fokszáma 1, 2, 2, 3, 4.</p>
+                <ol>
+                    <li>Tegyél le a papírra 5 pontot kör alakban.</li>
+                    <li><strong>Kezdd a legnagyobbal:</strong> A 4-es fokszámú pontból húzz vonalat az összes többi
+                        pontba.</li>
+                    <li><strong>Vizsgáld a legkisebbet:</strong> Az 1-es fokszámú pontunk már kész is van, mert az előbb
+                        kapott egy vonalat. Ide tilos több vonalat húzni!</li>
+                    <li>Köss össze további pontokat addig, amíg be nem állnak a 2, 2, 3 értékek.</li>
+                </ol>
+
+                <div class="tips">
+                    <strong>💡 Vizsgatipp:</strong> Ha olyan feladatot kapsz, hogy "Döntse el, létezik-e ilyen gráf",
+                    mindig add össze a megadott fokszámokat! Ha páratlan szám jön ki, azonnal írhatod, hogy "Nem
+                    lehetséges", és megkapod a maximális pontot rajzolás nélkül!
+                </div>
+            </section>
+
+            <section id="topic-3" class="topic-card">
+                <h2>3. Számtani és mértani sorozatok</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>A sorozatokat képzeld el egy számsorozatként, ahol egy bizonyos szabály szerint lépkedünk előre.
+                    <strong>Vigyázat:</strong> Nem mindig írják le a feladatban a "számtani" vagy "mértani" szót!
+                    Figyeld az utalásokat:
+                </p>
+                <ul>
+                    <li><strong>Számtani sorozat:</strong> Olyan, mint egy egyenletes lépcsősor. Mindig
+                        <strong>ugyanannyit adunk hozzá</strong> (vagy vonunk ki). <br><em>Példa az érettségiről:</em>
+                        "A tanfolyam ára minden héten ugyanannyi forinttal drágul." (2, 5, 8, 11... itt a differencia
+                        3).
+                    </li>
+                    <li><strong>Mértani sorozat:</strong> Olyan, mint a baktériumok szaporodása. Itt mindig
+                        <strong>ugyanannyival szorzunk</strong> (vagy osztunk). <br><em>Példa az érettségiről:</em> "Az
+                        autó értéke minden évben az előző évi értékének 90%-ára csökken." (2, 6, 18, 54... itt a
+                        kvóciens 3).
+                    </li>
+                </ul>
+
+                <h3>A kulcsfontosságú képletek és szabályok</h3>
+                <p>Mindent megtalálsz a függvénytáblázat "Sorozatok" fejezetében, de a logikát értened kell!</p>
+                <ul>
+                    <li><strong>Számtani:</strong>
+                        <ul>
+                            <li>Lépésköz jele: <em>d</em> (differencia)</li>
+                            <li>n-edik tag: Ha az 5. lépcsőfokra akarok jutni az elsőről, 4-szer kell fellépnem.
+                                Képlettel: a<sub>5</sub> = a<sub>1</sub> + 4d. (Általánosan: a<sub>n</sub> =
+                                a<sub>1</sub> + (n-1)d)</li>
+                            <li>Összegképlet: S<sub>n</sub> = ((a<sub>1</sub> + a<sub>n</sub>) / 2) &middot; n</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mértani:</strong>
+                        <ul>
+                            <li>Szorzó jele: <em>q</em> (kvóciens)</li>
+                            <li>n-edik tag: Ha a 8. tagra akarok jutni, 7-szer kell szoroznom q-val. Képlettel:
+                                a<sub>8</sub> = a<sub>1</sub> &middot; q<sup>7</sup>. (Általánosan: a<sub>n</sub> =
+                                a<sub>1</sub> &middot; q<sup>n-1</sup>)</li>
+                            <li>Összegképlet: S<sub>n</sub> = a<sub>1</sub> &middot; ((q<sup>n</sup> - 1) / (q - 1))
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Típusfeladat és lépésenkénti megoldás</h3>
+                <p><em>Tipikus feladat (2024. októberi érettségi alapján):</em> Egy számtani sorozat első tagja 6,
+                    hetedik tagja pedig 36. Adja meg a sorozat negyedik tagját!</p>
+                <ol>
+                    <li><strong>Írd ki, mit tudsz:</strong> a<sub>1</sub> = 6 és a<sub>7</sub> = 36.</li>
+                    <li><strong>Használd a "lépcső-logikát":</strong> Hogyan jutunk el az elsőről a hetedik tagra? Úgy,
+                        hogy az első taghoz hozzáadunk 6 darab lépésközt (d-t). Tehát: a<sub>7</sub> = a<sub>1</sub> +
+                        6d.</li>
+                    <li><strong>Helyettesíts be:</strong> 36 = 6 + 6d. Ebből egy egyszerű egyenletmegoldással megkapjuk,
+                        hogy 30 = 6d, tehát a lépésköz <strong>d = 5</strong>.</li>
+                    <li><strong>Válaszold meg a kérdést:</strong> A feladat a negyedik tagot (a<sub>4</sub>) kéri. Az
+                        a<sub>4</sub> = a<sub>1</sub> + 3d. Tehát a<sub>4</sub> = 6 + 3 &middot; 5 = 6 + 15 =
+                        <strong>21</strong>.
+                    </li>
+                </ol>
+
+                <div class="tips">
+                    <strong>💡 Tipikus buktatók és vizsgatippek:</strong>
+                    <ul>
+                        <li><strong>Keresd az utalást!</strong> Ha azt olvasod: "minden évben ugyanannyival nő", az
+                            <strong>számtani</strong>. Ha azt: "minden évben 5%-kal nő" (azaz 1,05-tel szorzódik), az
+                            <strong>mértani</strong>.
+                        </li>
+                        <li><strong>Ne keverd össze!</strong> Vizsgán azonnal húzd alá a szövegben, melyik típusról van
+                            szó, hogy ne a rossz képletet másold ki a függvénytáblából!</li>
+                        <li><strong>"Kiszámolás az ujjakon":</strong> Ha az I. részben leblokkolsz a képletektől, de
+                            kicsik a számok, simán írd fel a tagokat egymás után! Addig próbálgass hozzáadni számokat az
+                            elsőhöz, amíg ki nem jön a hetedik.</li>
+                        <li><strong>Részpont-mágnes:</strong> Ha megakadsz, csak írd ki az adatokat (a<sub>1</sub> =
+                            ..., S<sub>n</sub> = ...), és másold ki a függvénytáblából a megfelelő képletet. Erre már
+                            szinte mindig jár részpont!</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <section id="topic-4" class="topic-card">
+                <h2>4. Valószínűségszámítás és kombinatorika</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>A kombinatorika arra ad választ, hogy "Hányféleképpen lehet..." valamit megcsinálni (pl. hányféle
+                    sorrendben állhatunk sorba, hányféle lottóötös létezik). A valószínűségszámítás pedig azt mutatja
+                    meg, mennyi az esélye, hogy egy bizonyos dolog bekövetkezik (pl. mennyi az esélye, hogy hatost
+                    dobunk a kockával). A kettő azért jár kéz a kézben, mert az esély kiszámításához sokszor tudnunk
+                    kell, hogy
+                    "hányféleképpen" történhetnek a dolgok.</p>
+
+                <h3>A kulcsfontosságú képletek és szabályok</h3>
+                <p>A függvénytáblázat "Kombinatorika" és "Valószínűségszámítás" fejezeteiben benne van minden, de itt a
+                    legjobb barátod a számológéped lesz!</p>
+                <ul>
+                    <li><strong>A "Klasszikus valószínűségi modell" (Ezt álmodból felkeltve is tudni kell!):</strong>
+                        <em>P</em> = kedvező esetek száma / összes lehetséges eset száma
+                    </li>
+                    <li><strong>Sorba rendezés (Permutáció):</strong> Ha <em>n</em> embert (vagy tárgyat) akarunk sorba
+                        állítani, az <em>n!</em> (n faktoriális, azaz 1 &middot; 2 &middot; 3 &hellip; &middot; n)
+                        féleképpen tehető meg. (Pl. 5 ember sorba állítása: 5! = 120).</li>
+                    <li><strong>Kiválasztás, ahol NEM számít a sorrend (Lottó-típusú feladatok):</strong> Ha mondjuk 25
+                        dologból akarok kiválasztani 5-öt, és mindegy, milyen sorrendben húzom ki őket. Ez a kombináció.
+                        Képletben: (25 alatt az 5). Ezt ne számold kézzel! Keresd meg a számológépeden az
+                        <strong>nCr</strong> gombot! Beütöd: 25 nCr 5, és kiadja az eredményt.
+                    </li>
+                </ul>
+
+                <h3>Típusfeladat és lépésenkénti megoldás</h3>
+                <p><em>Tipikus feladat (2024. októberi érettségi):</em> Egy dobozban 10 db lekváros és 15 db
+                    csokis linzer van. Kiveszünk 5 darabot (visszatevés nélkül). Mennyi a valószínűsége, hogy pontosan 2
+                    darab lesz lekváros?</p>
+                <p>Megoldás menete:</p>
+                <ol>
+                    <li><strong>Idézd fel a főszabályt:</strong> <em>P</em> = Kedvező / Összes. Számoljuk ki külön a
+                        kettőt!</li>
+                    <li><strong>Összes eset:</strong> Összesen 25 linzerünk van (10 + 15). Ebből választunk ki 5-öt. A
+                        sorrend nem számít (mindegy, hogy a kezemben lévő 5 linzert milyen sorrendben vettem ki). Ez a
+                        számológépen: 25 nCr 5 = 53130. Tehát az összes eset 53130.</li>
+                    <li><strong>Kedvező eset:</strong> Nekünk pontosan 2 lekváros kell a 10-ből. Ezt (10 alatt a
+                        2)-féleképpen húzhatjuk ki (gépen 10 nCr 2). De vigyázat! 5 sütit húzunk összesen, tehát a
+                        maradék 3 süti mindenképpen csokis kell hogy legyen (a 15-ből)! Ezt (15 alatt a 3)-féleképpen
+                        húzhatjuk ki (gépen 15 nCr 3). Mivel ezek együtt történnek, a kettőt össze kell szorozni: (10
+                        alatt a 2) &middot; (15 alatt a 3). Számítógépen kiszámolva: 45 &middot; 455 = 20475.</li>
+                    <li><strong>A végeredmény:</strong> <em>P</em> = 20475 / 53130 &approx; 0,385 (azaz kb. 38,5% az
+                        esély).</li>
+                </ol>
+
+                <div class="tips">
+                    <strong>💡 Tipikus buktatók és vizsgatippek:</strong>
+                    <ul>
+                        <li><strong>"Visszatevéses" vagy "visszatevés nélküli"?</strong> Mindig olvasd el figyelmesen!
+                            Ha visszatevéses, akkor a lottó-szabály (nCr) helyett egyszerű szorzást kell használni (pl.
+                            mindig 25 &middot; 25 &middot; 25 &dots; a lehetőség).</li>
+                        <li><strong>A valószínűség SOHA nem lehet nagyobb 1-nél!</strong> Ha olyan eredményt kapsz, hogy
+                            1,5 vagy 50, akkor tuti, hogy felcserélted a törtet, és az összeset osztottad a kedvezővel!
+                            A valószínűség mindig egy 0 és 1 közötti szám (vagy százalékban 0% és 100% közötti).</li>
+                        <li><strong>A "kockadobás" vizsgatipp:</strong> Ha két kockával dobtok egyszerre, az esetek
+                            száma mindig 6 &middot; 6 = 36. Ha megkérdezik, mennyi az esélye mondjuk annak, hogy az
+                            összeg 8 lesz, ne matekozz, rajzolj! Rajzolj fel egy 6x6-os táblázatot (kocka 1 vs. kocka
+                            2), írd be a négyzetekbe az összegeket, és egyszerűen számold össze az ujjaidon a jó
+                            mezőket! Ez egy garantált "favágó", de hibátlan módszer a részpontokra, sőt a teljes pontra
+                            is!</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="topic-5" class="topic-card">
+                <h2>5. Statisztika és diagramok elemzése</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>A statisztika segít nagy adathalmazokat néhány jellemző számmal leírni. A <strong>sodrófadiagram (box
+                        plot)</strong> megmutatja az adatok szóródását és a középértéket egyetlen ábrán.</p>
+
+                <h3>A kulcsfontosságú képletek és szabályok</h3>
+                <ul>
+                    <li><strong>Átlag:</strong> Adatok összege / darabszám.</li>
+                    <li><strong>Medián:</strong> Sorba rendezett adatok középső értéke.</li>
+                    <li><strong>Szórás:</strong> Megmutatja, mennyire térnek el az adatok az átlagtól. (Számológéppel
+                        számold!)</li>
+                    <li><strong>Sodrófadiagram 5 értéke:</strong> Minimum, Alsó kvartilis (Q1), Medián (Q2), Felső
+                        kvartilis (Q3), Maximum.</li>
+                </ul>
+
+                <h3>Típusfeladat és lépésenkénti megoldás</h3>
+                <p><em>Feladat:</em> 14 lakás ára (millió Ft): 50, 50, 55, 55, 55, 70, 70, 80, 80, 90, 110, 115, 130,
+                    145. Ábrázolja sodrófadiagramon!</p>
+                <ol>
+                    <li><strong>Szélsőértékek:</strong> Min = 50, Max = 145.</li>
+                    <li><strong>Medián:</strong> A 7. és 8. adat átlaga: (70+80)/2 = 75.</li>
+                    <li><strong>Alsó kvartilis (Q1):</strong> Az alsó fele (7 adat) közepe: 55.</li>
+                    <li><strong>Felső kvartilis (Q3):</strong> A felső fele közepe: 110.</li>
+                    <li><strong>Rajzolás:</strong> Skálázott tengelyen doboz Q1-től Q3-ig, vonal a mediánnál, bajszok a
+                        széleken.</li>
+                </ol>
+
+                <div class="tips">
+                    <strong>💡 Vizsgatipp:</strong> Mielőtt bármit számolnál, <strong>rendezd növekvő sorba</strong> az
+                    adatokat! Jegyezd meg: a "doboz" az adatok középső 50%-át jelenti.
+                </div>
+            </section>
+
+            <section id="topic-6" class="topic-card">
+                <h2>6. Koordinátageometria</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>Alakzatok leírása számokkal és egyenletekkel. Lehetővé teszi, hogy rajzolás nélkül, pusztán
+                    számolással számítsunk távolságokat vagy metszéspontokat.</p>
+                <p>
+
+                <p>
+                    <img src="images/koordego_kepletek.png" alt="">
+                </p>
+                <h2>Normálvektor</h2>
+                <p>Egy egyenes normálvektora bármely, az adott egyenesre <strong> merőleges</strong>, nullvektortól
+                    különböző vektor.
+                    <br>
+                    Jele: 𝑛⃗⃗
+                    (𝑛1; 𝑛2 ).
+                </p>
+                <p>Ha az irányvektorból normálvektort akarsz csinálni:</p>
+
+                <div class="vector-container">
+                    <div class="v-box">
+                        <span class="v-name">v</span> ( <span class="num">3</span> ; <span class="num">5</span> )
+                    </div>
+
+                    <div class="arrow">➔</div>
+
+                    <div class="n-box">
+                        <span class="n-name">n</span> ( <span class="num">5</span> ; <span class="num-neg">-3</span> )
+                    </div>
+                </div>
+
+                <div class="memo-box">
+                    <strong>Röviden:</strong> Megcseréled a két számot, és az <u>egyiknek</u> (mindegy melyiknek)
+                    megváltoztatod az előjelét.
+                </div>
+
+
+
+                <h3>Típusfeladat: Egyenes egyenlete két pontból</h3>
+                <p><em>Feladat:</em> Adott a <strong>P(2; -3)</strong> és a <strong>Q(6; 5)</strong> pont. Írd fel az
+                    egyenesük egyenletét normálvektor segítségével!</p>
+
+                <div class="step-card">
+                    <ol>
+                        <li>
+                            <strong>Irányvektor kiszámítása :</strong>
+
+                            Vond ki a Q pont koordinátáiból a P pont koordinátáit!!
+                            <div class="vector-container">
+                                <span class="v-name">v</span> =PQ-> Q - P = (6 - 2; 5 - (-3)) = <strong>(4; 8)</strong>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>"Csere-bere" a normálvektorhoz:</strong>
+                            Cseréld meg a két számot, és az egyiket szorozd meg -1-gyel!
+                            <div class="vector-container">
+                                <span class="v-name">v</span>(4; 8) <span class="arrow">➔</span> <span
+                                    class="n-name">n</span>(8; -4)
+                            </div>
+                            <small>(Itt most a másodikat váltottuk negatívra: ez lesz az <strong>A</strong> és a
+                                <strong>B</strong> az egyenletben.)</small>
+                        </li>
+
+                        <li>
+                            <strong>Behelyettesítés a receptbe:</strong>
+                            Az egyenes egyenlete: <span class="highlight">Ax + By = Ax₀ + By₀</span>
+                            <p>Használjuk az <strong>n(8; -4)</strong> vektort és a <strong>P(2; -3)</strong> pontot:
+                            </p>
+                            <div class="formula">
+                                8 &middot; x + (-4) &middot; y = 8 &middot; 2 + (-4) &middot; (-3)
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Végezd el a szorzást:</strong>
+                            <div class="formula">
+                                8x - 4y = 16 + 12 <br>
+                                <strong>8x - 4y = 28</strong>
+                            </div>
+                            <small>Pro tipp: Mivel minden szám osztható 4-gyel, egyszerűsíthetsz: <strong>2x - y =
+                                    7</strong></small>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tips">
+                    <strong>💡 Vizsgatipp:</strong> Két alakzat metszéspontja mindig <strong>egyenletrendszer</strong>
+                    megoldását jelenti. Az előjelekre vigyázz a távolságképletben!
+                </div>
+            </section>
+
+            <section id="topic-7" class="topic-card">
+                <h2>7. Függvények vizsgálata és egyenletek</h2>
+
+                <h3>Mi ez és mire jó?</h3>
+                <p>Képzeld el a függvényt egy gépként: bedobsz egy számot (x), a gép csinál vele valamit a szabálya
+                    alapján, és kidob egy másik számot (y). A függvények grafikonjai segítenek vizuálisan megérteni a
+                    folyamatokat, az egyenleteket pedig sokszor könnyebb "leolvasni" egy rajzról, mint bonyolult
+                    képletekkel kiszámolni.</p>
+
+                <h3>A kulcsfontosságú "építőkockák" és szabályok</h3>
+                <p>Ezeket az alapfüggvényeket úgy kell felismerned, mint a tenyered!</p>
+                <ul>
+                    <li><strong>Egyenes arányosság (Lineáris függvény):</strong> Képlete: <em>y = mx + b</em>. Képe egy
+                        egyenes. Ha az x nő, az y is egyenletesen nő/csökken (pl. minél több kiflit veszel, annál többet
+                        fizetsz).
+                        <ul>
+                            <li><strong>m (meredekség):</strong> Azt mutatja, hogy ha az x-tengelyen jobbra lépsz 1-et,
+                                mennyit kell fel (pozitív m) vagy le (negatív m) lépned.</li>
+                            <li><strong>b (y-metszet):</strong> Megmutatja, hol metszi az egyenes az y-tengelyt.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fordított arányosság (Lineáris törtfüggvény):</strong> Képlete: <em>y = c / x</em>
+                        (alapesetben <em>y = 1/x</em>). Képe egy hiperbola (két görbe ág). Ha az x nő, az y ugyanannyiad
+                        részére csökken (pl. 2 munkás 10 óra alatt végez, 4 munkás feleannyi, azaz 5 óra alatt).
+                        <em>Soha nem érinti a tengelyeket!</em>
+                    </li>
+                    <li><strong>Másodfokú függvény:</strong> Képlete: <em>y = x<sup>2</sup></em>. Képe az U-alakú
+                        parabola. </li>
+                    <li><strong>Abszolútérték-függvény:</strong> Képlete: <em>y = |x|</em>. Képe egy V-alak. Mindent
+                        "pozitívvá tesz", ezért pattan vissza az x-tengelyről.</li>
+                </ul>
+
+                <h3>Összetett függvénytranszformációk (Az eltolások titka)</h3>
+                <p>Bármilyen bonyolult függvényt meg tudsz rajzolni az alábbi alapszabállyal, amit én <strong>"Belső
+                        ellenség, külső barát"</strong> szabálynak hívok:</p>
+                <ul>
+                    <li><strong>Zárójelen / Abszolútértéken / Törtvonalon BELÜL:</strong> Ez az x-tengelyen
+                        (vízszintesen) tolja el a grafikont, de <strong>ellentétesen</strong>, mint gondolnád! <br>Pl.
+                        az <em>y = (x - 3)<sup>2</sup></em> nem balra, hanem <strong>JOBBRA tolja 3-mal</strong> a
+                        parabolát!</li>
+                    <li><strong>Zárójelen KÍVÜL:</strong> Ez az y-tengelyen (függőlegesen) tologat, teljesen
+                        <strong>logikusan</strong>! <br>Pl. az <em>y = x<sup>2</sup> + 4</em> a parabolát <strong>FEL
+                            tolja 4-gyel</strong>.
+                    </li>
+                    <li><em>Példa:</em> Az <em>y = |x + 2| - 5</em> egy V-alak, aminek a csúcsa 2-vel balra és 5-tel
+                        lefelé van (a -2; -5 pontban).</li>
+                </ul>
+
+                <h3>Típusfeladat: Abszolútértékes egyenlet(őtlenség) grafikus megoldása</h3>
+                <p><em>Feladat (Érettségi klasszikus):</em> Oldja meg a valós számok halmazán grafikus módszerrel:
+                    <strong>|x - 2| - 3 &le; 1</strong>
+                </p>
+                <ol>
+                    <li><strong>A bal oldal megrajzolása:</strong> Vedd a bal oldalt egy önálló függvényként: <em>f(x) =
+                            |x - 2| - 3</em>.
+                        <ul>
+                            <li>Alapja az <em>|x|</em> (V-alak).</li>
+                            <li>Belső transzformáció: "- 2", tehát toljuk <strong>jobbra 2-vel</strong>.</li>
+                            <li>Külső transzformáció: "- 3", tehát toljuk <strong>le 3-mal</strong>.</li>
+                            <li>A V-alak csúcsa a (2; -3) pontban lesz. Rajzold fel (minden lépés 1-et megy fel és 1-et
+                                jobbra/balra)!</li>
+                        </ul>
+                    </li>
+                    <li><strong>A jobb oldal megrajzolása:</strong> A jobb oldal egy vízszintes egyenes: <em>g(x) =
+                            1</em>. Húzz egy vonalat az y-tengely 1-es magasságánál!</li>
+                    <li><strong>A metszéspontok leolvasása (Egyenlet megoldása):</strong> Keresd meg, hol metszi a
+                        V-alak a vízszintes vonalat. Ha jól rajzoltál, leolvashatod, hogy az <strong>x = -2</strong> és
+                        az <strong>x = 6</strong> pontoknál találkoznak. (Ha egyenlőség lett volna a feladatban, itt
+                        végeztünk is!)</li>
+                    <li><strong>Az egyenlőtlenség megoldása:</strong> A feladat azt kéri, hogy a V-alak (bal oldal)
+                        <em>kisebb vagy egyenlő</em> legyen, mint a vonal (jobb oldal). Azaz: <strong>Hol van a V-alak a
+                            vonal ALATT?</strong> A grafikonról ordít, hogy a -2 és a 6 közötti szakaszon.
+                    </li>
+                    <li><strong>Végeredmény felírása:</strong> A megoldás halmaza: <strong>x &isin; [-2 ; 6]</strong>
+                        (vagy -2 &le; x &le; 6).</li>
+                </ol>
+
+                <div class="tips">
+                    <strong>💡 Tipikus buktatók és vizsgatippek:</strong>
+                    <ul>
+                        <li><strong>Ne keverd az eltolásokat! (Belső vs. Külső)</strong><br>
+                            <em>A szabály:</em> A zárójelen (vagy abszolútértéken) belüli szám mindig az x-tengelyen tol
+                            (fordított irányba), a külső szám pedig az y-tengelyen (logikus irányba).<br>
+
+                        </li>
+
+                        <li><strong>Értelmezési Tartomány (ÉT) vs. Értékkészlet (ÉK): Melyik melyik
+                                tengely?</strong><br>
+                            <em>A szabály:</em> Az ÉT mindig az x-tengely (vízszintes)-tehát hogy mely helyeken
+                            Értelmezzük, az ÉK mindig az y-tengely, -tehát hogy milyen Értékeket vesz fel a függvény.
+                            (függőleges).<br>
+                            <em>Miért van ez így?</em> Gondolj a szavak jelentésére! Az "Értelmezési tartomány" azokat a
+                            számokat jelenti, amiket <em>be szabad dobni</em> a függvény-gépbe (ez a bemenet, az x). Az
+                            "Értékkészlet" pedig azokat az értékeket jelenti, amiket a gép <em>készletként kidob
+                                magából</em> (ez a kimenet, az y).
+                        </li>
+
+                        <li><strong>A meredekség (m) lépcsős trükkje:</strong><br>
+                            <em>A szabály:</em> Ha egy egyenes egyenlete y = -2x + 5, a meredekség -2. Rajzolásnál ez
+                            azt jelenti, hogy 1-et lépsz jobbra, és 2-t lépsz LE.<br>
+                            y=mx+b képletből könnyedén kiolvasható.
+                        </li>
+
+                        <li><strong>Mentsd meg a pontokat behelyettesítéssel!</strong><br>
+                            <em>A szabály:</em> Ha grafikusan oldasz meg egyenletet, a leolvasott x-értéket mindig
+                            helyettesítsd vissza az eredeti képletbe!<br>
+                            <em>Miért van ez így?</em> Egy vastagabb ceruzavonal vagy egy megcsúszott vonalzó miatt
+                            könnyű félreolvasni a metszéspontot a rácspapíron. A rajzod lehet csalóka, de az algebra
+                            sosem hazudik. Ha a papíron úgy tűnik, hogy a két grafikon az x = 6-nál metszi egymást,
+                            ellenőrizd: |6 - 2| - 3 = |4| - 3 = 1. Ha kijön a jobb oldal, nyugodtan hátra dőlhetsz, a
+                            megoldásod hibátlan.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="topic-8" class="topic-card">
+                <h2>8. Síkgeometria: Hogyan zsebeljük be az ingyen pontokat?</h2>
+
+                <h3>Hogyan ismered fel a feladatot?</h3>
+                <p>Gyanús, hogy síkgeometriával van dolgod, ha oldalhosszokat, szögeket vagy területet kérnek, és van
+                    egy ábra (vagy neked kell rajzolnod egyet).
+                    <strong>A titkos recept:</strong> Rajzolj, jelölj be mindent, amit tudsz, és keresd a derékszögeket!
+                </p>
+
+                <div class="grid-container">
+                    <div>
+                        <h3>1. Derékszögű háromszögek</h3>
+                        <p>A legbarátságosabb eszközök:</p>
+                        <ul>
+                            <li><strong>Pitagorasz-tétel:</strong> Ha csak oldalak kellenek. <span
+                                    class="formula-box">a² + b² = c²</span></li>
+                            <li><strong>Szögfüggvények:</strong> Ha képbe jönnek a szögek is (sin, cos, tg).</li>
+                            <li><strong>Thalész-tétel:</strong> Ha egy körben a körátmérő a háromszög átfogója, az a
+                                háromszög derékszögű!</li>
+                            <p>Tétel: Ha egy kör átmérőjének két végpontját összekötjük a kör kerületének bármely más
+                                pontjával, akkor derékszögű háromszöget kapunk.</p>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>2. Általános háromszögek</h3>
+                        <p>Ha nincs derékszög, jönnek a nehézágyúk:</p>
+                        <ul>
+                            <li><strong>Szinusztétel:</strong> Párban gondolkodj! Oldal és a szemközti szög aránya
+                                állandó.</li>
+                            <li><strong>Koszinusztétel:</strong> Olyan, mint a Pitagorasz, csak van egy "farkinca" a
+                                végén:
+                                <span class="formula-box">c² = a² + b² - 2ab·cosγ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+                <h2>Négyszögek:
+                </h2>
+                <p>paralelogramma,trapéz, rombusz..</p>
+                <h2>Paralelogramma: A párhuzamosság bajnoka</h>
+
+                    <h3>Miből áll össze?</h3>
+                    <p>A paralelogramma olyan négyszög, aminek a szemközti oldalai párhuzamosak és egyenlőek. De amire
+                        az
+                        érettségin tényleg figyelned kell:</p>
+
+                    <ul>
+                        <li><strong>Az átlók felezik egymást:</strong> Ez a megmentőd, ha koordinátageometriáról vagy
+                            vektorokról van szó!</li>
+                        <li><strong>Szomszédos szögek:</strong> Bármely két egymás melletti szög összege <span
+                                class="highlight">180°</span>.</li>
+                        <li><strong>Szemközti szögek:</strong> Ezek pedig pont ugyanakkorák.</li>
+                    </ul>
+
+                    <div class="grid-container">
+                        <div class="example-box" style="margin-top: 0;">
+                            <h4>Területszámítás 1.</h4>
+                            <p>Ha van magasságod:</p>
+                            <div class="formula">T = a · m<sub>a</sub></div>
+                        </div>
+                        <div class="example-box"
+                            style="margin-top: 0; border-left-color: #4f46e5; background: #eef2ff;">
+                            <h4>Területszámítás 2.</h4>
+                            <p>Ha két oldal és egy szög van:</p>
+                            <div class="formula">T = a · b · sinα</div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <strong>A "Rombusz-különkiadás":</strong> A rombusz egy olyan paralelogramma, aminek minden
+                        oldala
+                        egyenlő. Itt az átlók nemcsak felezik egymást, hanem <strong>merőlegesek</strong> is egymásra!
+                        Ha
+                        rombuszt látsz, azonnal keress 4 egyforma derékszögű háromszöget benne.
+                    </div>
+
+                    <h3>Mire figyelj? (Típushiba)</h3>
+                    <p>Sokan elfelejtik, hogy a paralelogramma területe <strong>nem</strong> <code>a · b</code>. Ez csak
+                        a
+                        téglalapnál igaz, ahol a két oldal pont merőleges egymásra (vagyis az egyik oldal maga a
+                        magasság).
+                        Általános esetben mindig kell a magasság vagy a szinusz!</p>
+
+                    <h2>Trapéz és társai: A trükk</h2>
+                    <p>Ha a feladat trapézról vagy paralelogrammáról szól, ne ess pánikba! Húzz be egy segédvonalat
+                        (általában a magasságot), és válaszd le vele a derékszögű háromszögeket. Onnantól már a sima
+                        Pitagorasz is elég lehet.</p>
+
+                    <div class="tip-box">
+                        <strong>Típushiba:</strong> Ne használd a Pitagorasz-tételt olyan háromszögre, amiről nem tudod
+                        biztosan, hogy derékszögű! Előbb keresd meg a 90 fokot!
+                    </div>
+                    <h3>Szögek a szárakon</h3>
+                    <p>Jegyezd meg jól: a trapéz alapjai párhuzamosak. Emiatt az <strong>egy száron fekvő
+                            szögek</strong>
+                        (amiket a szár és a két alap bezár) kiegészítik egymást 180 fokra.</p>
+
+                    <div class="formula-box">
+                        α + δ = 180° <br>
+                        β + γ = 180°
+                    </div>
+
+                    <div class="tip-box">
+                        <strong>Vigyázz!</strong> Ez nem jelenti azt, hogy az alapon fekvő szögek (α és β) egyenlőek
+                        vagy
+                        180-at adnak. Ez csak a <em>húrtrapéznál</em> (szimmetrikus trapéz) igaz!
+                    </div>
+
+                    <h3>Ami mindig "kimegy a fejekből":</h3>
+                    <ul>
+                        <li><strong>Rombusz átlói:</strong> Mindig merőlegesek egymásra és felezik a szögeket. Ha
+                            rombusz
+                            van, keress derékszögű háromszöget az átlók találkozásánál!</li>
+                        <li><strong>Középvonal:</strong> Az oldalak felezőpontját összekötő szakasz.
+                            <ul>
+                                <li>Háromszögnél: fele az alapnak és párhuzamos vele.</li>
+                                <li>Trapéznál: az alapok számtani közepe: <span class="highlight">k = (a + c) /
+                                        2</span>.
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Magasságpont:</strong> A háromszög magasságvonalai egy pontban metszik egymást. .
+                        </li>
+                    </ul>
+
+                    <h2>Háromszög Nevezetes Vonalai</h2>
+
+                    <div class="grid-container">
+                        <div class="example-box">
+                            <h4>📏 Magasságvonal (m)</h4>
+                            <p>A csúcsból a szemközti oldalra húzott <strong>merőleges</strong>.</p>
+                            <p class="tip"><i>Tipp:</i> Területszámításhoz nélkülözhetetlen!</p>
+                        </div>
+
+                        <div class="example-box" style="border-left-color: #10b981;">
+                            <h4>↔️ Középvonal (k)</h4>
+                            <p>Két oldalfelezőt köt össze. Párhuzamos az alappal és <strong>feleakkora</strong>.</p>
+                        </div>
+
+                        <div class="example-box" style="border-left-color: #f59e0b;">
+                            <h4>🎯 Súlyvonal (s)</h4>
+                            <p>Csúcs + szemközti oldalfelező pont. A súlypont <strong>2:1 arányban</strong> osztja!</p>
+                        </div>
+                    </div>
+
+                    <div class="logic-box" style="margin-top: 20px; background: #fef2f2; border: 1px solid #fee2e2;">
+                        <h4>⚠️ Vigyázat, ne keverd!</h4>
+                        <ul>
+                            <li>A <strong>Magasságvonal</strong> merőleges, de nem biztos, hogy felez.</li>
+                            <li>A <strong>Súlyvonal</strong> felez, de nem biztos, hogy merőleges.</li>
+                            <li>A <strong>Középvonal</strong> nem érinti a csúcsokat!</li>
+                        </ul>
+                    </div>
+                    <h2>Háromszög köré írható kör</h2>
+                    <p>A kör középpontját úgy kapjuk meg, hogy megrajzoljuk a háromszög oldalfelező merőlegeseit. Ezek
+                        egy pontban metszik egymást: ez lesz a köré írt kör középpontja.</p>
+                    <p>A köré írt kör sugara a középpont és bármelyik csúcs távolsága lesz.</p>
+                    <p>
+                        <img src="images/koreirhatokor.jpg" alt="" class="small-diagram">
+                    </p>
+                    <h2>Háromszögbe írható kör</h2>
+                    <p>
+                        A beírt kör középpontja a háromszög szögfelező egyeneseinek a metszéspontja.
+                    </p>
+                    <p>
+                        <img src="images/beirhatokor.png" alt="">
+                    </p>
+                    <h2></h2>
+                    <table style="width:100%; border-collapse: collapse; margin-top: 15px;">
+                        <tr style="background-color: #4f46e5; color: white;">
+                            <th style="padding: 10px; border: 1px solid #ddd;">Mit felez?</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Melyik körhöz kell?</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Oldalt</strong> (merőlegesen)
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Köré írható kör</td>
+                        </tr>
+                        <tr style="background-color: #f8fafc;">
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Szöget</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Beírható kör</td>
+                        </tr>
+                    </table>
+
+                    <h3>Hasznos oldalak a függvénytáblázatban:</h3>
+                    <ul>
+                        <li><strong>Sárga:</strong> 38-40. (Területek), 45. (Trigonometria)</li>
+                        <li><strong>Fehér:</strong> 54., 59-60., 62. oldal(Trigonometria)</li>
+                    </ul>
+            </section>
+            <section id="topic-9" class="topic-card">
+                <h2>9. Térgeometria</h2>
+                <p>
+                    <img src="images/palast.png" alt="" class="small-diagram">
+
+                </p>
+                <p>
+                    <img src="images/forgashenger.png" alt="">
+                </p>
+                <p>
+                    <img src="images/tergeometria_kepletek.png" alt="" class="small-diagram">
+                </p>
+                <p>
+                    <img src="images/csonkakup.jpg" alt="" class="small-diagram">
+                </p>
+            </section>
+            <section id="topic-10" class="topic-card">
+                <h2>10. Hatványozás azonosságai</h2>
+                <p><img src="images/hatvany.png" alt=""></p>
+            </section>
+
+            <section class="topic-card" id="gyakorlo-feladatok">
+                <h2>📝 Gyakorlófeladatok</h2>
+                <p>Próbáld meg egyedül, aztán ellenőrizd magad!</p>
+
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge geo">Koordinátageometria</span>
+                        <span class="points">4 pont</span>
+                    </div>
+
+                    <p class="question">
+                        <img src="images/koordgeo_1.png" alt="">
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <img src="images/koordgeo_1_M.png" alt="">
+                        </div>
+                    </details>
+
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge prob">Valószínűségszámítás</span>
+                        <span class="points">4 pont</span>
+                    </div>
+
+                    <p class="question">
+                        Egy dobozban 12 piros és 8 kék golyó van. Kihúzunk egyszerre kettőt.
+                        Mennyi az esélye, hogy mindkettő kék lesz?
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <p><strong>Összes eset:</strong> \(\binom{20}{2} = 190\)</p>
+                            <p><strong>Kedvező eset:</strong> \(\binom{8}{2} = 28\)</p>
+                            <p><strong>P(A):</strong> \(\frac{28}{190} \approx \mathbf{0,147}\) (kb. 14,7%)</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge def">Függvények</span>
+                        <span class="points">3 pont</span>
+                    </div>
+
+                    <p class="question">
+                        <img src="images/fuggvenyek_1.png" alt="">
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <img src="images/fuggvenyek_1_M.png" alt="">
+                        </div>
+                    </details>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge def">Függvények</span>
+                        <span class="points">2 pont</span>
+                    </div>
+
+                    <p class="question">
+                        <img src="images/fuggvenyek_2.png" alt="">
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <p>A minimum helye: -2 (1 pont) <br>
+                                A minimum értéke: 4 (1 pont)</p>
+                            <br>
+                            <strong>Magyarázat:</strong>
+                            <p>A kulcs az (x + 2)^2 kifejezés. Bármilyen valós számot is emelsz négyzetre, az eredmény
+                                soha nem lesz negatív.Ha a zárójel belseje pozitív, a négyzete pozitív.Ha a zárójel
+                                belseje negatív, a négyzete akkor is pozitív.A négyzetes tag legkisebb lehetséges értéke
+                                tehát a 0.</p>
+                            <p>Mivel a négyzetes kifejezés legkisebb értéke 0, a teljes függvény akkor lesz a legkisebb,
+                                amikor
+                                ez a négyzetes rész "eltűnik" (nullává válik). Ekkor csak a végén lévő konstans szám
+                                marad meg:0 + 4 = 4
+                                <br>
+                                Tehát a függvény minimumának értéke: 4.
+                                <br>
+                            <p>A minimum helyének meghatározása:
+                                <br>Azt kell megkeresnünk, hogy melyik x érték teszi a
+                                zárójelet nullává: x+2 = 0 --> x=-2 esetén teljesül.
+                            </p>
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer>
+            <p>Készült a sikeres matek érettségiért! Sok sikert! 🍀</p>
+        </footer>
+    </div>
+</body>
+
+</html>

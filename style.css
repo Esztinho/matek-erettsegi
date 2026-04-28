@@ -1,0 +1,271 @@
+/* Alapvető beállítások és változók */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --card-bg: #ffffff;
+    --tip-bg: #e8f4f8;
+    --tip-border: #3498db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Fejléc */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Témakör kártyák */
+.topic-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--accent-color);
+}
+
+.topic-card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.topic-card h3 {
+    color: var(--accent-color);
+    margin-top: 25px;
+}
+
+/* Listák */
+ul, ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Tippek doboz */
+.tips {
+    background-color: var(--tip-bg);
+    border-left: 4px solid var(--tip-border);
+    padding: 15px 20px;
+    margin-top: 25px;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.95rem;
+}
+
+/* Lábjegyzet */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Sidebar alapstílus */
+.sidebar {
+    position: fixed; /* Ott marad görgetésnél is */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Függőlegesen középre teszi */
+    width: 200px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.sidebar h3 {
+    color: #4f46e5;
+    font-size: 1.1rem;
+    margin-top: 0;
+    border-bottom: 2px solid #eef2ff;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+/* FONTOS: Hogy a tartalom ne csússzon rá a menüre */
+.container {
+    margin-left: 260px; /* Hagyunk helyet a menünek */
+    max-width: calc(100% - 300px);
+}
+
+/* Mobilnézet: Mobilon rejtsük el vagy tegyük felülre */
+@media (max-width: 1100px) {
+    .sidebar {
+        position: static;
+        width: auto;
+        transform: none;
+        margin-bottom: 20px;
+    }
+    .container {
+        margin-left: auto;
+        max-width: 900px;
+    }
+}
+
+/* Smooth scroll: hogy ne ugorjon, hanem ússzon a linkre kattintáskor */
+html {
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.small-diagram {
+    width: 800px; 
+    height: auto; /* Az arányokat megtartja */
+    
+    
+}
+
+.vector-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    font-family: 'Courier New', monospace; 
+    margin: 20px 0;
+    padding: 15px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.v-name { color: #10b981; font-weight: bold; } 
+.n-name { color: #ef4444; font-weight: bold; } 
+.num { font-weight: bold; }
+.num-neg { color: #ef4444; font-weight: bold; }
+
+.arrow { color: #64748b; }
+
+.memo-box {
+    border-left: 4px solid #4f46e5;
+    background: #eef2ff;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
+
+.exercise-card {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 25px;
+        transition: transform 0.2s;
+    }
+
+    .exercise-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .exercise-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .badge {
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .geo { background: #e0f2fe; color: #0369a1; }
+    .prob { background: #fef3c7; color: #92400e; }
+    .def { background: #8fd3a5; color: #08292b; }
+
+    .points { font-weight: bold; color: #64748b; }
+
+    .question {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #1e293b;
+    }
+
+    /* Megoldás stílusa */
+    .solution {
+        margin-top: 15px;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 10px;
+    }
+
+    summary {
+        cursor: pointer;
+        color: #4f46e5;
+        font-weight: bold;
+        outline: none;
+    }
+
+    summary:hover { text-decoration: underline; }
+
+    .solution-content {
+        background: #f8fafc;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        border-left: 4px solid #10b981;
+    }
