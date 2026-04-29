@@ -15,6 +15,7 @@
         <header>
             <h1>Matek Érettségi Túlélőcsomag 🎓</h1>
             <p>A 10 leggyakoribb témakör középszintű érettségihez (2026)</p>
+            <h4>A teljesség igénye nélkül!</h4>
         </header>
 
         <main>
@@ -38,6 +39,11 @@
                     <li class="special-link">
                         <a href="#gyakorlo-feladatok" class="practice-btn">
                             <i class="fa-solid fa-pen-to-square"></i>Gyakorlófeladatok
+                        </a>
+                    </li>
+                    <li class="special-link">
+                        <a href="#letoltesek" class="download-nav-btn">
+                            <i class="fa-solid fa-file-pdf"></i> PDF Összefoglalók
                         </a>
                     </li>
                 </ul>
@@ -906,27 +912,30 @@
                     </details>
 
                 </div>
-
                 <div class="exercise-card">
                     <div class="exercise-header">
-                        <span class="badge prob">Valószínűségszámítás</span>
+                        <span class="badge geo">Koordinátageometria</span>
                         <span class="points">4 pont</span>
                     </div>
 
                     <p class="question">
-                        Egy dobozban 12 piros és 8 kék golyó van. Kihúzunk egyszerre kettőt.
-                        Mennyi az esélye, hogy mindkettő kék lesz?
+                        Számítsa ki az
+                        A (1; 0 )
+                        és
+                        B (5; -3 )
+                        pontok távolságát!
                     </p>
 
                     <details class="solution">
                         <summary>Kattints a megoldásért!</summary>
                         <div class="solution-content">
-                            <p><strong>Összes eset:</strong> \(\binom{20}{2} = 190\)</p>
-                            <p><strong>Kedvező eset:</strong> \(\binom{8}{2} = 28\)</p>
-                            <p><strong>P(A):</strong> \(\frac{28}{190} \approx \mathbf{0,147}\) (kb. 14,7%)</p>
+                            <img src="images/koordgeo_2_M.png" alt="">
                         </div>
                     </details>
+
                 </div>
+
+
 
                 <div class="exercise-card">
                     <div class="exercise-header">
@@ -982,6 +991,103 @@
                         </div>
                     </details>
 
+                </div>
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge prob">Valószínűségszámítás</span>
+                        <span class="points">4 pont</span>
+                    </div>
+
+                    <p class="question">
+                        Egy dobozban 12 piros és 8 kék golyó van. Kihúzunk egyszerre kettőt.
+                        Mennyi az esélye, hogy mindkettő kék lesz?
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <p><strong>Összes eset:</strong> \(\binom{20}{2} = 190\)</p>
+                            <p><strong>Kedvező eset:</strong> \(\binom{8}{2} = 28\)</p>
+                            <p><strong>P(A):</strong> \(\frac{28}{190} \approx \mathbf{0,147}\) (kb. 14,7%)</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge prob">Valószínűségszámítás</span>
+                        <span class="points">2 pont</span>
+                    </div>
+
+                    <p class="question">
+                        Két szabályos dobókockával egyszerre dobva mennyi annak a valószínűsége,
+                        hogy két különböző számot dobunk?
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <p>Az első kockával bármit dobhatunk (6 lehetőség). A második kockával viszont már csak
+                                5-félét dobhatunk (bármit, csak azt nem, amit az elsővel), hogy különbözőek legyenek:$$k
+                                = 6 \cdot 5 = 30$$</p>
+                            <img src="images/valseg_1_M.png" alt="">
+                        </div>
+                    </details>
+
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <span class="badge prob">Valószínűségszámítás</span>
+                        <span class="points">4 pont</span>
+                    </div>
+
+                    <p class="question">
+                        A háromjegyű pozitív egész számok közül véletlenszerűen kiválasztunk egyet.
+                        Mennyi annak a valószínűsége, hogy a kiválasztott szám számjegyei
+                        különbözők? Megoldását részletezze!
+                    </p>
+
+                    <details class="solution">
+                        <summary>Kattints a megoldásért!</summary>
+                        <div class="solution-content">
+                            <img src="images/valseg_2_M.png" alt="">
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <section class="topic-card" id="letoltesek">
+                <h2>📥 Letölthető Összefoglalók (PDF)</h2>
+                <p>Vidd magaddal a tudást! Elmélet és gyakorló feladatok egy helyen.</p>
+
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="pdf-icon">🎲</div>
+                        <h4>Valószínűségszámítás</h4>
+                        <p></p>
+                        <a href="downloads/valoszinusegszamitas.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Letöltés
+                        </a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="pdf-icon">f(x)</div>
+                        <h4>Függvények</h4>
+                        <a href="downloads/fuggvenyek.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Letöltés
+                        </a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="pdf-icon">x;y</div>
+                        <h4>Koordinátageometria</h4>
+
+                        <a href="downloads/koord-geo.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Letöltés
+                        </a>
+                    </div>
                 </div>
             </section>
 
