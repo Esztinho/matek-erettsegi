@@ -31,7 +31,15 @@
                     <li><a href="#topic-8">8. Síkgeometria</a></li>
                     <li><a href="#topic-9">9. Térgeometria</a></li>
                     <li><a href="#topic-10">10. Hatványozás</a></li>
-                    <li><a href="#gyakorlo-feladatok">+1 Gyakorló feladatok</a></li>
+                    <li><a href="#szogfuggvenyek">📐 Szögfüggvények</a></li>
+                    <li><a href="#teljes-negyzet">🧩 Teljes négyzetté alakítás</a></li>
+                    <li><a href="#szamrendszerek">🔢 Számrendszerek</a></li>
+                    <li><a href="#szamhalmazok">📊 Számok hierarchiája </a></li>
+                    <li class="special-link">
+                        <a href="#gyakorlo-feladatok" class="practice-btn">
+                            <i class="fa-solid fa-pen-to-square"></i>Gyakorlófeladatok
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -707,6 +715,174 @@
                 <h2>10. Hatványozás azonosságai</h2>
                 <p><img src="images/hatvany.png" alt=""></p>
             </section>
+            <section class="topic-card" id="szogfuggvenyek">
+                <h2>📐 Trigonometria (Szögfüggvények)</h2>
+                <p><small>Függvénytáblázat: Sárga 45. oldal | Fehér 62. oldal</small></p>
+
+                <div class="grid-container">
+                    <div class="example-box">
+                        <h4>Derékszögű háromszög</h4>
+                        <ul class="formula-list">
+                            <li><strong>sin α</strong> = szemközti / átfogó</li>
+                            <li><strong>cos α</strong> = melletti / átfogó</li>
+                            <li><strong>tg α</strong> = szemközti / melletti</li>
+                        </ul>
+                    </div>
+                    <p><img src="images/szogfuggvenyek.png" alt=""></p>
+
+                    <div class="example-box" style="border-left-color: #ef4444;">
+                        <h4>Bármilyen más háromszög</h4>
+                        <p><strong>Szinusztétel:</strong> \(\frac{a}{\sin \alpha} = \frac{b}{\sin \beta}\)</p>
+                        <p><strong>Koszinusztétel:</strong> \(c^2 = a^2 + b^2 - 2ab \cdot \cos \gamma\)</p>
+                    </div>
+                </div>
+
+                <div class="logic-box" style="background: #fff7ed; border: 1px solid #ffedd5;">
+                    <h4>💡 Profi Tipp</h4>
+                    <p>Ha a háromszög mind a <strong>három oldala</strong> megvan, és szöget keresel, mindig a
+                        <strong>Koszinusztétellel</strong> kezdj! Ez egyértelműen megadja a szöget.
+                    </p>
+                </div>
+            </section>
+
+            <section class="topic-card" id="teljes-negyzet">
+                <h2>🧩 Teljes négyzetté alakítás fortélyai</h2>
+
+                <div class="logic-box">
+                    <h3>Mi a cél?</h3>
+                    <p>A célunk, hogy egy másodfokú kifejezést, például az \(x^2 + bx + c\) alakot átírjuk \((x + d)^2 +
+                        e\) alakra. Ez elengedhetetlen a <strong>függvények ábrázolásánál</strong> és a <strong>kör
+                            egyenleténél</strong>.</p>
+                </div>
+
+                <div class="step-card">
+                    <h3>A 3 lépéses recept</h3>
+                    <ol>
+                        <li>
+                            <strong>Nézd az x-es tagot:</strong> Vedd az \(x\) előtti szám (együttható)
+                            <strong>felét</strong>.
+                            <br><small>Példa: \(x^2 + 6x\)-nél a 6 fele a <b>3</b>.</small>
+                        </li>
+                        <li>
+                            <strong>Írd fel a négyzetet:</strong> Készíts egy zárójelet ezzel a számmal: \((x + 3)^2\).
+                        </li>
+                        <li>
+                            <strong>Korrigálj:</strong> Ha a zárójelet kibontanád (\(x^2 + 6x + 9\)), kapsz egy
+                            felesleges számot (a 3 négyzetét, a 9-et). Ezt <strong>le kell vonnod</strong> a végén!
+                            <br><small>Tehát: \(x^2 + 6x = (x + 3)^2 - 9\)</small>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>📝 Kidolgozott példa: \(x^2 - 8x + 10\)</h4>
+                    <div class="calculation-flow">
+                        <p>1. Az x előtti szám a -8. Ennek a fele: <strong>-4</strong>.</p>
+                        <p>2. Felírjuk a négyzetet: <strong>(x - 4)²</strong>.</p>
+                        <p>3. Korrekció: le kell vonnunk a (-4)²-et, azaz 16-ot: <strong>(x - 4)² - 16</strong>.</p>
+                        <p>4. Ne felejtsd el az eredeti +10-et a végéről: <strong>(x - 4)² - 16 + 10</strong>.</p>
+                        <p class="final-result">VÉGEREDMÉNY: <strong>(x - 4)² - 6</strong></p>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>💡 Tipp:</strong> Mindig ellenőrizd magad! Ha fejben (vagy a papír szélén)
+                    visszabontod a zárójelet a \((a-b)^2 = a^2 - 2ab + b^2\) képlettel, pontosan az eredeti kifejezést
+                    kell visszakapnod.
+                </div>
+            </section>
+
+            <section class="topic-card" id="szamrendszerek">
+                <h2>🔢 Számrendszerek és Átváltások</h2>
+
+                <div class="logic-box">
+
+                </div>
+
+                <div class="grid-container">
+                    <div class="example-box">
+                        <h4>1. Bármiből ➔ Tízesbe</h4>
+
+                        <h4>Példa: 2034<sub>5</sub> ➔ n<sub>10</sub></h4>
+                        <p>Használjuk a helyiérték-táblázatot (most az alap az 5, mert 5-ös számrendszerből váltunk):
+                        </p>
+
+                        <div class="calculation-flow">
+                            <p>1. Helyiértékek: (mivel 4-jegyű a szám, mindig 1-gyel csökkentett kitevővel kezdjük,
+                                egészen a 0 hatványig)<br>
+                                5<sup>3</sup>=125... <br>
+                                5<sup>2</sup>=25, <br>
+                                5<sup>1</sup>=5, <br>
+                                5<sup>0</sup>=1,<br></p>
+
+
+
+                            <p>2. A szorzások elvégzése:</p>
+                            <ul style="list-style: none;">
+                                <li>2 &times; <strong>125</strong> = 250</li>
+                                <li>0 &times; <strong>25</strong> = 0</li>
+                                <li>3 &times; <strong>5</strong> = 15</li>
+                                <li>4 &times; <strong>1</strong> = 4</li>
+                            </ul>
+
+                            <p>3. Összeadás:</p>
+                            <p class="final-result">250 + 0 + 15 + 4 = <strong>269<sub>10</sub></strong></p>
+
+                        </div>
+                    </div>
+
+                    <div class="example-box" style="border-left-color: #f59e0b;">
+                        <h4>2. Tízesből ➔ Bármibe</h4>
+                        <p><strong>Módszer:</strong> Maradékos osztás az új számrendszer alapjával, amíg el nem fogynak
+                            a számok. A maradékokat <b>lentről felfelé</b> olvassuk ki!</p>
+                        <div class="calculation-flow">
+                            <p>Példa: 25 átváltása kettesbe:</p>
+                            <ul>
+                                <li>25 : 2 = 12, maradék: <b>1</b></li>
+                                <li>12 : 2 = 6, maradék: <b>0</b></li>
+                                <li>6 : 2 = 3, maradék: <b>0</b></li>
+                                <li>3 : 2 = 1, maradék: <b>1</b></li>
+                                <li>1 : 2 = 0, maradék: <b>1</b></li>
+                            </ul>
+                            <p>Eredmény: <strong>11001<sub>2</sub></strong></p>
+                        </div>
+                        <div class="calculation-flow">
+                            <p>Példa: 33211 átváltása 8-asba:</p>
+                            <p>
+                                <img src="images/szamrendszer_atvaltas8.png" alt="">
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="tip-box">
+                    <strong>💡 Érettségi tipp:</strong> A legtöbb tudományos számológépen van <strong>BASE</strong> mód.
+                    Tanuld meg használni (BIN, OCT, DEC, HEX), mert így pillanatok alatt ellenőrizheted az átváltást,
+                    vagy elvégezheted a műveleteket!
+                </div>
+            </section>
+
+            <section class="topic-card" id="szamhalmazok">
+                <h2>🔢 Számhalmazok hierarchiája</h2>
+
+                <div class="logic-box">
+                    <ul class="set-list">
+                        <li><span class="symbol">ℕ</span> <strong>Természetes számok:</strong> 0, 1, 2, 3...</li>
+                        <li><span class="symbol">ℤ</span> <strong>Egész számok:</strong> ..., -2, -1, 0, 1, 2...</li>
+                        <li><span class="symbol">ℚ</span> <strong>Racionális számok:</strong> Felírhatók törtként (p/q).
+                        </li>
+                        <li><span class="symbol">ℚ*</span> <strong>Irracionális számok:</strong> Pl. √2, π, e. (ezek nem
+                            írhatók fel törtként)</li>
+                        <li><span class="symbol">ℝ</span> <strong>Valós számok:</strong> A számegyenes összes száma.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="images/szamhalmazok.png" alt="" class="small-diagram" style="width: 400px;">
+                    </p>
+                </div>
+            </section>
 
             <section class="topic-card" id="gyakorlo-feladatok">
                 <h2>📝 Gyakorlófeladatok</h2>
@@ -805,8 +981,10 @@
                             </p>
                         </div>
                     </details>
+
                 </div>
             </section>
+
 
 
         </main>
